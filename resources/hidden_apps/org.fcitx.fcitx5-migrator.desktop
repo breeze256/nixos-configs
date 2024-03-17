@@ -1,0 +1,6 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Fcitx 5 Migration Wizard
+Exec=fcitx5-migrator
+Type=Application
+NoDisplay=true

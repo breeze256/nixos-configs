@@ -1,0 +1,48 @@
+{
+  "nodes": {
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1710532761,
+        "narHash": "sha256-SUXGZNrXX05YA9G6EmgupxhOr3swI1gcxLUeDMUhrEY=",
+        "ref": "refs/heads/master",
+        "rev": "206f457fffdb9a73596a4cb2211a471bd305243d",
+        "revCount": 3413,
+        "type": "git",
+        "url": "https://mirror.ghproxy.com/https://github.com/nix-community/home-manager"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://mirror.ghproxy.com/https://github.com/nix-community/home-manager"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1710451336,
+        "narHash": "sha256-pP86Pcfu3BrAvRO7R64x7hs+GaQrjFes+mEPowCfkxY=",
+        "ref": "nixos-unstable",
+        "rev": "d691274a972b3165335d261cc4671335f5c67de9",
+        "revCount": 596954,
+        "type": "git",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs"
+      },
+      "original": {
+        "ref": "nixos-unstable",
+        "type": "git",
+        "url": "https://mirrors.tuna.tsinghua.edu.cn/git/nixpkgs"
+      }
+    },
+    "root": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

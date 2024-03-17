@@ -1,0 +1,6 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Fcitx 5
+Exec=/nix/store/68fqdlf0gc9hkrxa6apkhcznm10j16lv-fcitx5-with-addons-5.1.5/bin/fcitx5
+Type=Application
+NoDisplay=true
