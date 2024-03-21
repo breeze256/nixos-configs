@@ -9,11 +9,7 @@
   ];
   
   nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "openssl-1.1.1w"
-      "electron-19.1.9"
-    ];
+    allowUnfree = true; # 允许非自由软件
   };
 
   nix = {
@@ -21,7 +17,7 @@
     # nixPath = ["/etc/nix/path"];
     settings = {
       # Enable flakes and new 'nix' command
-      experimental-features = "nix-command flakes";
+      experimental-features = "nix-command flakes"; # Enable flake
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
       trusted-users = [ "strnight" ];
@@ -116,7 +112,7 @@
 
   # Printing configs
   services.printing.enable = true;
-  services.printing.drivers = [ pkgs.hplip ];
+  services.printing.drivers = [ pkgs.hplip ]; # Enable hplip
   services.avahi = {
     enable = true;
     nssmdns4 = true;
