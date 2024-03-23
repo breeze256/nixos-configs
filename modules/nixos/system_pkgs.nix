@@ -3,19 +3,41 @@
 {  
   environment = {
     systemPackages = with pkgs; [
-      lightdm-gtk-greeter # Lightdm gtk greeter
-      vim # TUI Text editor TUI 文本编辑器
+    
+      ## CLI Applications
+      # Tools
       wget # Web tool 网络工具
-      libayatana-appindicator # Appindicator 托盘指示
+      vim # TUI Text editor TUI 文本编辑器
+      asusctl # ASUS tweaks
       git # Git tool Git 工具
       neofetch # Displays Linux information 显示 Linux 信息
       appimage-run # AppImage support AppImage 支持
+      libayatana-appindicator # Appindicator 托盘指示
+      cups-filters # CUPS filters
+      usbutils # Usb port tool
+      appimagekit # Appimage tools
+      proxychains # Terminal proxy
+      android-tools # adb and fastboot tools adb 及 fastboot 工具
+      
+      # Development
+      gcc11 # GNU Compiler Collection
+      gdb # GNU Debug Bridge
+      gnumake # Make
+      clang-tools # Clang
+      
+      # Java
+      zulu8 # ZuluJDK-8
+      zulu17 # ZuluJDK-17
+      
+      ## GUI Applications
+      # System
+      lightdm-gtk-greeter # Lightdm gtk greeter
       # gnome.gnome-software # Flatpak support Flatpak 支持
       plata-theme # GTK theme GTK 主题
       paper-icon-theme # Icon theme 图标主题
-      gnome.gnome-terminal # Gnome terminal Gnome 终端
-      gnome.gnome-backgrounds # Gnome wallpapers
       adapta-backgrounds # Adapta wallpapers
+      gnome.gnome-backgrounds # Gnome wallpapers
+      gnome.gnome-terminal # Gnome terminal Gnome 终端
       gnome.dconf-editor # Dconf view
       gnome.gnome-system-monitor # Gnome system monitor Gnome 系统监视器
       gnome.file-roller # Gnome archive manager Gnome 归档管理器
@@ -24,26 +46,20 @@
       gthumb # Image viewer
       cinnamon.nemo-fileroller # Nemo archive extensions Nemo 归档扩展
       gedit # GUI text editor GUI 文本编辑器
-      gcc11 # GNU Compiler Collection
-      gdb # GNU Debug Bridge
-      gnumake # Make
-      clang-tools # Clang
-      android-tools # adb and fastboot tools adb 及 fastboot 工具
-      zulu8 # ZuluJDK-8
-      zulu17 # ZuluJDK-17
+      
+      # Tools
       system-config-printer # CUPS configure tool
-      cups-filters # CUPS filters
-      usbutils # Usb port tool
-      appimagekit # Appimage tools
       ntfs3g # NTFS support
       woeusb-ng # Windows image flasher
-      proxychains # Terminal proxy
+      
     ];
     budgie.excludePackages = with pkgs; [
-      mate.mate-terminal # Use gnome.gnome-terminal 改用 gnome.gnome-terminal
-      mate.pluma # Use gedit 改用 gedit
-      mate.engrampa # Use gnome.file-roller 改用 gnome.file-roller
-      mate.eom # Use gthumb
+    
+      mate.mate-terminal # => gnome.gnome-terminal
+      mate.pluma # => gedit
+      mate.engrampa # => gnome.file-roller
+      mate.eom # => gthumb
+      
     ];
   };
 }
