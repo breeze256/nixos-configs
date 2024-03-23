@@ -27,7 +27,7 @@
       gcc11 # GNU Compiler Collection
       gdb # GNU Debug Bridge
       gnumake # Make
-      clang-tools_11 # Clang
+      clang-tools # Clang
       android-tools # adb and fastboot tools adb 及 fastboot 工具
       zulu8 # ZuluJDK-8
       zulu17 # ZuluJDK-17
