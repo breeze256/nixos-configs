@@ -9,15 +9,15 @@
   ];
   
   nixpkgs.config = {
-    allowUnfree = true; # 允许非自由软件
+    allowUnfree = true; 
   };
 
   nix = {
-    # registry = (lib.mapAttrs (_: flake: {inherit flake;})) ((lib.filterAttrs (_: lib.isType "flake")) inputs);
-    # nixPath = ["/etc/nix/path"];
+
     settings = {
       # Enable flakes and new 'nix' command
       experimental-features = "nix-command flakes"; # Enable flake
+
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
       trusted-users = [ "strnight" ];
@@ -29,30 +29,35 @@
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       ];
     };
+
+    # Garbage collection
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+
   };
 
   networking = {
-    hostName = "MINIPC-PN64"; # Hostname. 主机名
-    networkmanager.enable = true;  # Use NetworkManager. 使用 NetworkManager
-    nameservers = [ "223.5.5.5" "223.6.6.6" ]; # Set DNS. 设置 DNS
+    hostName = "MINIPC-PN64"; # hostname
+    networkmanager.enable = true;
+    nameservers = [ "223.5.5.5" "223.6.6.6" ]; # Set DNS.
     # firewall.enable = false;
   };
 
-  # GRUB configurations. GRUB 配置
+  # GRUB configurations.
   boot = { 
     kernelParams = [ "intel_idle.max_cstate=1" ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernel.sysctl = { "vm.swappiness" = 25; };
+
     loader.grub = {
       enable = true;
       device = "nodev";
       efiSupport = true;
-      # Add the Windows boot entry. 添加 Windows 启动条目
+
+      # Add the Windows boot entry.
       extraEntries = '' 
         menuentry "Windows Boot Manager" {
             search --file --no-floppy --set=root /EFI/Microsoft/Boot/bootmgfw.efi
@@ -60,12 +65,13 @@
         }
       '';
     };
+
     loader.efi.canTouchEfiVariables = true;
-    loader.efi.efiSysMountPoint = "/boot"; # EFI mount point EFI 挂载点
+    loader.efi.efiSysMountPoint = "/boot"; # EFI mount point
   };
 
 
-  # Filesystem and swap settings. 文件系统及交换空间设置
+  # Filesystem and swap settings.
   fileSystems = {
     "/".options = [ "compress=zstd" ];
     "/home".options = [ "compress=zstd" ];
@@ -73,62 +79,35 @@
   };
   swapDevices = [ { device = "/dev/nvme0n1p4"; } ]; # Define swap device 指定交换空间设备
 
+  # user configs
   users.users = {
     strnight = {
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
-        # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
+        # SSH Key
       ];
       extraGroups = [ "wheel" "libvirtd" ];
     };
   };
 
-  # Set your time zone. 设置时区
+  # time zone
   time.timeZone = "Asia/Shanghai";
   
-  # Select internationalisation properties. 设置默认Locale
+  # select internationalisation properties
   i18n.defaultLocale = "zh_CN.UTF-8"; 
   i18n.inputMethod = {
-    enabled = "fcitx5"; # Use fcitx5 使用 fcitx5
+    enabled = "fcitx5"; # fcitx5
     fcitx5.addons = with pkgs; [
-      fcitx5-rime # rime 中州韵
-      fcitx5-chinese-addons # Chinese support 中文支持
+      fcitx5-rime # rime
+      fcitx5-chinese-addons # Chinese support
     ];
   };
-
-  # Budgie and lightdm configs
-  services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "modesetting" ];
-  services.xserver.desktopManager.budgie.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.displayManager.lightdm.greeters.slick.enable = false;
-  services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
-  services.xserver.displayManager.lightdm.greeters.gtk.theme.name = "Plata-Lumine";
-  services.xserver.displayManager.lightdm.greeters.gtk.iconTheme.name = "Paper";
-  services.xserver.displayManager.lightdm.greeters.gtk.clock-format = "%H:%M:%S";
-  services.xserver.displayManager.lightdm.greeters.gtk.indicators = [ 
-    "~host" "~spacer" "~clock" "~spacer" "~session" "~language" "~a11y" "~power" 
-  ];
-
-  # Printing configs
-  services.printing.enable = true;
-  services.printing.drivers = [ pkgs.hplip ]; # Enable hplip
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-  
-  # programs.steam = {
-    # enable = true;
-    # remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    # dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  # };
 
   # virt-manager
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  # audio
   hardware.pulseaudio.enable = false;
   # rtkit is optional but recommended
   security.rtkit.enable = true;
