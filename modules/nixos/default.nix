@@ -3,9 +3,11 @@
 {
   # List your module files here
   imports = [
+
     # ./systemd_timers.nix
     ./system_pkgs.nix
     ./proxychains.nix
     ./fonts.nix
+    
   ];
 }

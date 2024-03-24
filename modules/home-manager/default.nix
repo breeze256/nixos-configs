@@ -3,9 +3,11 @@
 {
   # List your module files here
   imports = [
+
     ./autostart.nix
     ./home_pkgs.nix
     ./dconf.nix # dconf settings
     ./home_configs.nix
+    
   ];
 }

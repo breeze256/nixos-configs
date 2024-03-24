@@ -1,7 +1,24 @@
 { config, pkgs, ... }:
 
 {
-  # VS Code configured via home-manager, with extensions
+  # bash
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+    # bashrcExtra = ''
+      # export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+    # '';
+
+    # aliases
+    shellAliases = {
+      la = "ls -all"; # List all
+      nixos-upgrade = "sudo nix flake update /etc/nixos && sudo nixos-rebuild switch --upgrade"; # Update lock file and upgrade packages
+      meminfo = "free -h -l -t";
+      cpuinfo = "lscpu";
+    };
+  };
+
+  # VSCode
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
@@ -10,7 +27,7 @@
     ];
   };
   
-  # git 相关配置
+  # git configs
   programs.git = {
     enable = true;
     userName = "libshell64";
@@ -20,7 +37,7 @@
   # Conky configs
   home.file.".config/conky" = {
     source = ../../resources/conky;
-    recursive = true;   # 递归整个文件夹
+    recursive = true;
   };
   
   # Minecraft natives
@@ -32,20 +49,18 @@
   # Pixmaps
   home.file.".local/share/pixmaps" = {
     source = ../../resources/pixmaps;
-    recursive = true;   # 递归整个文件夹
+    recursive = true;
   };
   
   # User's scripts
   home.file.".local/share/scripts" = {
     source = ../../resources/scripts;
-    recursive = true;   # 递归整个文件夹
-    executable = true;  # 将其中所有文件添加「执行」权限
+    recursive = true;
+    executable = true;
   };
 
-  
   # Hidden apps
   home.file.".local/share/applications/org.fcitx.Fcitx5.desktop".source = ../../resources/hidden_apps/org.fcitx.Fcitx5.desktop; # Fcitx5
   home.file.".local/share/applications/org.fcitx.fcitx5-migrator.desktop".source = ../../resources/hidden_apps/org.fcitx.fcitx5-migrator.desktop; # Fcitx5 migrator
   home.file.".local/share/applications/cups.desktop".source = ../../resources/hidden_apps/cups.desktop; # CUPS
-  
 }

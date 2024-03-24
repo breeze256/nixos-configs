@@ -2,6 +2,7 @@
 
 {  
   environment = {
+
     systemPackages = with pkgs; [
     
       ## CLI Applications
@@ -24,6 +25,8 @@
       gdb # GNU Debug Bridge
       gnumake # Make
       clang-tools # Clang
+      python3 # py
+      python311Packages.pip # pip
       
       # Java
       zulu8 # ZuluJDK-8
@@ -44,6 +47,7 @@
       gnome.gnome-calendar # Gnome calendar
       gnome.gnome-clocks # Gnome clocks
       gthumb # Image viewer
+      gparted # Disk tool
       cinnamon.nemo-fileroller # Nemo archive extensions Nemo 归档扩展
       gedit # GUI text editor GUI 文本编辑器
       
@@ -53,6 +57,7 @@
       woeusb-ng # Windows image flasher
       
     ];
+
     budgie.excludePackages = with pkgs; [
     
       mate.mate-terminal # => gnome.gnome-terminal
@@ -61,5 +66,6 @@
       mate.eom # => gthumb
       
     ];
+    
   };
 }
