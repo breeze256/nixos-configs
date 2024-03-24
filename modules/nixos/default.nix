@@ -5,6 +5,7 @@
   imports = [
 
     # ./systemd_timers.nix
+    ./services.nix
     ./system_pkgs.nix
     ./proxychains.nix
     ./fonts.nix
