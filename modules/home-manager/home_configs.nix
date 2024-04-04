@@ -15,6 +15,7 @@
       nixos-upgrade = "sudo nix flake update /etc/nixos && sudo nixos-rebuild switch --upgrade"; # Update lock file and upgrade packages
       meminfo = "free -h -l -t";
       cpuinfo = "lscpu";
+      editconfig = "sudo code /etc/nixos --no-sandbox --user-data-dir=/root/.config/Code";
     };
   };
 

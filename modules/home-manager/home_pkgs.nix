@@ -17,10 +17,12 @@
     qv2ray # Proxy client
     teamspeak_client # Speak client
     telegram-desktop # Social app
+    varia # download manager
 
     # Education
     stellarium # Star map
     octaveFull # Calculating
+    kdePackages.kalzium # periodic table
 
     # Game
     hmcl # Minecraft Launcher MC 启动器

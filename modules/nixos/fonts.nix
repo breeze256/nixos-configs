@@ -25,6 +25,14 @@
       
     ];
 
+    fontconfig.localConf = ''
+      <!-- fix steam Chinese display -->
+      <match target="pattern">
+        <test qual="any" name="family"><string>Helvetica</string></test>
+        <edit name="family" mode="assign"><string>Sarasa UI SC</string></edit>
+      </match>
+    '';
+
     fontconfig.defaultFonts = {
 
       emoji = [ "Noto Color Emoji" ]; # emoji

@@ -2,25 +2,21 @@
 
 {
   # apanel-png
-  systemd.timers."apanel-png" = {
+  systemd.timers."switchto-light" = {
 
     wantedBy = [ "timers.target" ];
 
     timerConfig = {
-      OnCalendar = "hourly";
+      OnCalendar = "*-*-* 7:15:00";
       Persistent = true; 
-      Unit = "apanel-png.service";
+      Unit = "switchto-light.service";
     };
 
   };
 
-  systemd.services."apanel-png" = {
-
-    script = ''
-      ${pkgs.curl}/bin/curl -o /home/strnight/.cache/apanel.png "https://7timer.info/V3/exe/apanel.php?lon=87.1777&lat=43.4709&en&2km"
-    '';
-    
+  systemd.services."switchto-light" = {
     serviceConfig = {
+      ExecStart = "/home/strnight/.local/share/scripts/switchto-light.sh";
       Type = "oneshot";
       User = "strnight";
     };

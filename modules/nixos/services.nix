@@ -5,6 +5,11 @@
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "modesetting" ];
   services.xserver.desktopManager.budgie.enable = true;
+  services.xserver.desktopManager.budgie.extraPlugins = with pkgs; [
+    budgiePlugins.budgie-media-player-applet 
+    budgiePlugins.budgie-analogue-clock-applet
+    budgiePlugins.budgie-user-indicator-redux
+  ];
   services.xserver.displayManager.lightdm.enable = true;
   services.xserver.displayManager.lightdm.greeters.slick.enable = false;
   services.xserver.displayManager.lightdm.greeters.gtk.enable = true;
@@ -23,4 +28,5 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
 }
