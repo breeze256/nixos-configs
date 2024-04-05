@@ -75,8 +75,31 @@
   programs.vscode = {
     enable = true;
     extensions = with pkgs.vscode-extensions; [
+      # Tools
+      formulahendry.code-runner
+      
+      # Python
+      ms-python.python
+
+      # CPP
       ms-vscode.cpptools
       llvm-vs-code-extensions.vscode-clangd
+      twxs.cmake
+      ms-vscode.cmake-tools
+
+
+      # Nix
+      jnoortheen.nix-ide
+
+      # Appearance
+      # ryanolsonx.solarized
+      pkief.material-product-icons
+      # jtlowe.vscode-icon-theme
+      ms-ceintl.vscode-language-pack-zh-hans
+
+      # SSH
+      ms-vscode-remote.remote-ssh
+
     ];
   };
   

@@ -14,10 +14,12 @@
     birdtray # thunderbird tray
     localsend # File transfer 文件传输
     qq # Social app 社交软件 
+    wechat-uos # wechat
     qv2ray # Proxy client
     teamspeak_client # Speak client
     telegram-desktop # Social app
     varia # download manager
+    # bilibili # bilibili
 
     # Education
     stellarium # Star map

@@ -46,6 +46,7 @@
       gnome.file-roller # Gnome archive manager Gnome 归档管理器
       gnome.gnome-calendar # Gnome calendar
       gnome.gnome-clocks # Gnome clocks
+      gnome.ghex # Hex editor
       gthumb # Image viewer
       gparted # Disk tool
       cinnamon.nemo-fileroller # Nemo archive extensions Nemo 归档扩展
