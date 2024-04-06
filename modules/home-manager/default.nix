@@ -6,8 +6,7 @@
 
     ./packages
     ./autostart
-    ./dconf.nix # dconf settings
-    ./home_configs.nix
+    ./configs
     
   ];
 }
