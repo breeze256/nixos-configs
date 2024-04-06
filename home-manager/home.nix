@@ -7,8 +7,8 @@
   ];
 
   # Set the user and the user's directory managed by home-manager.
-  home.username = "strnight";
-  home.homeDirectory = "/home/strnight";
+  home.username = "breeze256";
+  home.homeDirectory = "/home/breeze256";
     
 
   # ~/.Xresources
@@ -22,7 +22,7 @@
   };
   # import xterm's theme
   xresources.extraConfig = ''
-    #include "/home/strnight/.config/xterm/nord.Xresources"
+    #include "/home/breeze256/.config/xterm/nord.Xresources"
   ''; 
 
 

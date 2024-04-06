@@ -16,9 +16,9 @@
 
   systemd.services."switchto-light" = {
     serviceConfig = {
-      ExecStart = "/home/strnight/.local/share/scripts/switchto-light.sh";
+      ExecStart = "/home/breeze256/.local/share/scripts/switchto-light.sh";
       Type = "oneshot";
-      User = "strnight";
+      User = "breeze256";
     };
 
   };

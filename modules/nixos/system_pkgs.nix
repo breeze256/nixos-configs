@@ -45,10 +45,12 @@
       gnome.gnome-system-monitor # Gnome system monitor Gnome 系统监视器
       gnome.file-roller # Gnome archive manager Gnome 归档管理器
       gnome.gnome-calendar # Gnome calendar
+      gnome.pomodoro # Time management
       gnome.gnome-clocks # Gnome clocks
       gnome.ghex # Hex editor
       gthumb # Image viewer
       gparted # Disk tool
+      qalculate-gtk # Calculator
       cinnamon.nemo-fileroller # Nemo archive extensions Nemo 归档扩展
       gedit # GUI text editor GUI 文本编辑器
       
@@ -65,6 +67,7 @@
       mate.pluma # => gedit
       mate.engrampa # => gnome.file-roller
       mate.eom # => gthumb
+      mate.mate-calc # => qalculate-gtk
       
     ];
     

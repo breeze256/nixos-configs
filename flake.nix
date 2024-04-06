@@ -1,5 +1,5 @@
 {
-  description = "Starry Night's NixOS Flake";
+  description = "Breeze256's NixOS Flake";
 
   nixConfig = {
     extra-substituters = [
@@ -42,7 +42,7 @@
             home-manager.useUserPackages = true;
 
             # Set the user managed by home-manager.
-            home-manager.users.strnight = import ./home-manager/home.nix;
+            home-manager.users.breeze256 = import ./home-manager/home.nix;
 
             # use inputs in home.nix
             home-manager.extraSpecialArgs = inputs;

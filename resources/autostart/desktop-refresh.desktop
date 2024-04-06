@@ -2,4 +2,4 @@
 Type=Application
 Name=Desktop Refresh
 Description=
-Exec=/home/strnight/.local/share/scripts/desktop-refresh.sh
+Exec=/home/breeze256/.local/share/scripts/desktop-refresh.sh

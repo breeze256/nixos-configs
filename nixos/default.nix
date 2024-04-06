@@ -23,7 +23,7 @@
 
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
-      trusted-users = [ "strnight" ];
+      trusted-users = [ "breeze256" ];
       substituters = lib.mkForce [
         "https://mirror.sjtu.edu.cn/nix-channels/store"
         # "https://cache.nixos.org"
@@ -50,7 +50,8 @@
   };
 
   # GRUB configurations.
-  boot = { 
+  boot = {
+    initrd.availableKernelModules = [ "ehci_hcd" ];
     kernelParams = [ "intel_idle.max_cstate=1" ];
     kernelPackages = pkgs.linuxPackages_latest;
     kernel.sysctl = { "vm.swappiness" = 25; };
@@ -84,7 +85,7 @@
 
   # user configs
   users.users = {
-    strnight = {
+    breeze256 = {
       isNormalUser = true;
       openssh.authorizedKeys.keys = [
         # SSH Key

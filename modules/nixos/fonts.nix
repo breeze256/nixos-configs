@@ -39,9 +39,9 @@
 
       # monospace
       monospace = [
-        "Sarasa Mono SC"
-        "Noto Sans Mono CJK SC"
         "DejaVu Sans Mono"
+        "monospace"
+        "Noto Sans Mono CJK SC"
       ];
 
       # sansserif

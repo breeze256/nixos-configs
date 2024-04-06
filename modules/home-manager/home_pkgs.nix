@@ -25,6 +25,7 @@
     stellarium # Star map
     octaveFull # Calculating
     kdePackages.kalzium # periodic table
+    dialect # translator
 
     # Game
     hmcl # Minecraft Launcher MC 启动器
