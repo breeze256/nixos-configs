@@ -112,31 +112,31 @@
   
   # Conky configs
   home.file.".config/conky" = {
-    source = ../../resources/conky;
+    source = ../../../resources/conky;
     recursive = true;
   };
   
   # Minecraft natives
   home.file.".minecraft/natives" = {
-    source = ../../resources/mc-natives;
+    source = ../../../resources/mc-natives;
     recursive = true;
   };
   
   # Pixmaps
   home.file.".local/share/pixmaps" = {
-    source = ../../resources/pixmaps;
+    source = ../../../resources/pixmaps;
     recursive = true;
   };
   
   # User's scripts
   home.file.".local/share/scripts" = {
-    source = ../../resources/scripts;
+    source = ../../../resources/scripts;
     recursive = true;
     executable = true;
   };
 
   # Hidden apps
-  home.file.".local/share/applications/org.fcitx.Fcitx5.desktop".source = ../../resources/hidden_apps/org.fcitx.Fcitx5.desktop; # Fcitx5
-  home.file.".local/share/applications/org.fcitx.fcitx5-migrator.desktop".source = ../../resources/hidden_apps/org.fcitx.fcitx5-migrator.desktop; # Fcitx5 migrator
-  home.file.".local/share/applications/cups.desktop".source = ../../resources/hidden_apps/cups.desktop; # CUPS
+  home.file.".local/share/applications/org.fcitx.Fcitx5.desktop".source = ../../../resources/hidden_apps/org.fcitx.Fcitx5.desktop; # Fcitx5
+  home.file.".local/share/applications/org.fcitx.fcitx5-migrator.desktop".source = ../../../resources/hidden_apps/org.fcitx.fcitx5-migrator.desktop; # Fcitx5 migrator
+  home.file.".local/share/applications/cups.desktop".source = ../../../resources/hidden_apps/cups.desktop; # CUPS
 }
