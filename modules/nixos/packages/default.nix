@@ -9,6 +9,7 @@
       # Tools
       wget # Web tool 网络工具
       vim # TUI Text editor TUI 文本编辑器
+      xray # xray core
       asusctl # ASUS tweaks
       git # Git tool Git 工具
       neofetch # Displays Linux information 显示 Linux 信息
@@ -37,6 +38,7 @@
       lightdm-gtk-greeter # Lightdm gtk greeter
       # gnome.gnome-software # Flatpak support Flatpak 支持
       plata-theme # GTK theme GTK 主题
+      materia-theme
       paper-icon-theme # Icon theme 图标主题
       adapta-backgrounds # Adapta wallpapers
       gnome.gnome-backgrounds # Gnome wallpapers

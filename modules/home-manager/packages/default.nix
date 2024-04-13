@@ -36,7 +36,6 @@
     codeblocks # C IDE
 
     # Multi-Media
-    yesplaymusic # Music app 音乐软件
     netease-cloud-music-gtk # Netease GTK 
     # bilibili # bilibili
     obs-studio # Screen recorder
