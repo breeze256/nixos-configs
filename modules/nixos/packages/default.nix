@@ -22,16 +22,22 @@
       android-tools # adb and fastboot tools adb 及 fastboot 工具
       
       # Development
+      # C/CPP
       gcc11 # GNU Compiler Collection
       gdb # GNU Debug Bridge
       gnumake # Make
       clang-tools # Clang
+
+      # Python
       python3 # py
       python311Packages.pip # pip
       
       # Java
       zulu8 # ZuluJDK-8
       zulu17 # ZuluJDK-17
+
+      # Node.js
+      nodejs
       
       ## GUI Applications
       # System
