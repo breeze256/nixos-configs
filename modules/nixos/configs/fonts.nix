@@ -22,6 +22,7 @@
       # other fonts
       hack-font
       jetbrains-mono
+      cascadia-code
       
     ];
 

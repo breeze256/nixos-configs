@@ -5,9 +5,10 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    # bashrcExtra = ''
-      # export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
-    # '';
+    bashrcExtra = ''
+      export PATH=~/.npm-packages/bin:$PATH
+      export NODE_PATH=~/.npm-packages/lib/node_modules
+    '';
 
     # aliases
     shellAliases = {
