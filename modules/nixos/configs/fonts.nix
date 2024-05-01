@@ -19,6 +19,12 @@
       # sarasa
       sarasa-gothic
 
+      # maple font
+      maple-mono
+      maple-mono-NF
+      maple-mono-SC-NF
+      maple-mono-autohint
+
       # other fonts
       hack-font
       jetbrains-mono

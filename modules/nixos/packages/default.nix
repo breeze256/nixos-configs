@@ -8,6 +8,7 @@
       ## CLI Applications
       # Tools
       wget # Web tool 网络工具
+      colorls # ls with color and font-awesome icons
       vim # TUI Text editor TUI 文本编辑器
       xray # xray core
       asusctl # ASUS tweaks
