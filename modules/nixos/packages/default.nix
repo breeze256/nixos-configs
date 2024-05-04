@@ -8,13 +8,12 @@
       ## CLI Applications
       # Tools
       wget # Web tool 网络工具
-      colorls # ls with color and font-awesome icons
       vim # TUI Text editor TUI 文本编辑器
-      xray # xray core
-      aria2 # Download tool
-      asusctl # ASUS tweaks
       git # Git tool Git 工具
-      fastfetch # Displays Linux information 显示 Linux 信息
+      colorls # ls with color and font-awesome icons
+      aria2 # Download tool
+      fastfetch # Displays Linux information
+      asusctl # ASUS tweaks
       appimage-run # AppImage support AppImage 支持
       libayatana-appindicator # Appindicator 托盘指示
       cups-filters # CUPS filters
@@ -23,18 +22,7 @@
       proxychains # Terminal proxy
       android-tools # adb and fastboot tools adb 及 fastboot 工具
       
-      # Development
-      # C/CPP
-      gcc11 # GNU Compiler Collection
-      gdb # GNU Debug Bridge
-      gnumake # Make
-      clang-tools # Clang
-
-      # Python
-      python3 # py
-      python311Packages.pip # pip
-      
-      # Java
+      # Java (Just for Minecraft lol)
       zulu8 # ZuluJDK-8
       zulu17 # ZuluJDK-17
 
