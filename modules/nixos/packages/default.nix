@@ -11,6 +11,7 @@
       colorls # ls with color and font-awesome icons
       vim # TUI Text editor TUI 文本编辑器
       xray # xray core
+      aria2 # Download tool
       asusctl # ASUS tweaks
       git # Git tool Git 工具
       fastfetch # Displays Linux information 显示 Linux 信息

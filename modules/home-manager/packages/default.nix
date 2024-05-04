@@ -7,6 +7,7 @@
     tree # Tree view 树状图视图
     htop # Task manager
     hunspell # Spell checker
+    lazydocker # Docker manager
 
     # Internet
     firefox # Web browser 网络浏览器
@@ -18,7 +19,7 @@
     clash-verge-rev # clash
     teamspeak_client # Speak client
     telegram-desktop # Social app
-    varia # download manager
+    uget # GUI download manager
     # bilibili # bilibili
 
     # Education

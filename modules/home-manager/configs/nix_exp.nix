@@ -8,6 +8,7 @@
     bashrcExtra = ''
       export PATH=~/.npm-packages/bin:$PATH
       export NODE_PATH=~/.npm-packages/lib/node_modules
+      export PNPM_HOME=~/.npm-packages/bin
     '';
 
     # aliases
@@ -115,8 +116,11 @@
     executable = true;
   };
 
-  # Hidden apps
-  home.file.".local/share/applications/org.fcitx.Fcitx5.desktop".source = ../../../resources/hidden_apps/org.fcitx.Fcitx5.desktop; # Fcitx5
-  home.file.".local/share/applications/org.fcitx.fcitx5-migrator.desktop".source = ../../../resources/hidden_apps/org.fcitx.fcitx5-migrator.desktop; # Fcitx5 migrator
-  home.file.".local/share/applications/cups.desktop".source = ../../../resources/hidden_apps/cups.desktop; # CUPS
+
+  # Modified desktop files
+  home.file.".local/share/applications" = {
+    source = ../../../resources/applications;
+    recursive = true;
+    executable = true;
+  };
 }

@@ -90,7 +90,7 @@
       openssh.authorizedKeys.keys = [
         # SSH Key
       ];
-      extraGroups = [ "wheel" "libvirtd" "docker" ];
+      extraGroups = [ "wheel" "docker" "vboxusers" ];
     };
   };
 

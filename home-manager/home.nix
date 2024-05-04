@@ -17,12 +17,12 @@
     # xterm's configs
     "Xft.dpi" = 93;
     "xterm*faceSize" = 11;
-    "XTerm*faceName" = "Sarasa Mono SC";
+    "XTerm*faceName" = "DejaVu Sans Mono Book";
     "XTerm*charClass" = [ "37:48" "45-47:48" "58:48" "64:48" "126:48" ];
   };
   # import xterm's theme
   xresources.extraConfig = ''
-    #include "/home/breeze256/.config/xterm/nord.Xresources"
+    #include "/home/breeze256/.config/xterm/xcolors-gnometerm.Xresources"
   ''; 
 
 
