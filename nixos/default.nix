@@ -90,7 +90,7 @@
       openssh.authorizedKeys.keys = [
         # SSH Key
       ];
-      extraGroups = [ "wheel" "libvirtd" ];
+      extraGroups = [ "wheel" "libvirtd" "docker" ];
     };
   };
 
@@ -120,6 +120,12 @@
     #jack.enable = true;
   };
 
+  # docker
+  virtualisation.docker.enable = true;
+  virtualisation.docker.storageDriver = "btrfs";
+  virtualisation.docker.daemon.settings = {
+    "registry-mirrors" = [ "https://docker.mirrors.ustc.edu.cn/" ];
+  };
 
 
   # This option defines the first version of NixOS you have installed on this particular machine,

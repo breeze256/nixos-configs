@@ -13,7 +13,7 @@
       xray # xray core
       asusctl # ASUS tweaks
       git # Git tool Git 工具
-      neofetch # Displays Linux information 显示 Linux 信息
+      fastfetch # Displays Linux information 显示 Linux 信息
       appimage-run # AppImage support AppImage 支持
       libayatana-appindicator # Appindicator 托盘指示
       cups-filters # CUPS filters
@@ -77,6 +77,7 @@
       mate.engrampa # => gnome.file-roller
       mate.eom # => gthumb
       mate.mate-calc # => qalculate-gtk
+      mate.atril # => xournalpp 
       
     ];
     

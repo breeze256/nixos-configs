@@ -17,6 +17,8 @@
       meminfo = "free -h -l -t";
       cpuinfo = "lscpu";
       editconfig = "sudo code /etc/nixos --no-sandbox --user-data-dir=/root/.config/Code";
+      ls = "colorls";
+      ff = "fastfetch";
     };
   };
 
@@ -72,36 +74,13 @@
     };
   };
 
-  # VSCode
+  # vscode
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
-      # Tools
-      formulahendry.code-runner
-      
-      # Python
-      ms-python.python
-
-      # CPP
-      ms-vscode.cpptools
-      llvm-vs-code-extensions.vscode-clangd
-      twxs.cmake
-      ms-vscode.cmake-tools
-
-
-      # Nix
-      jnoortheen.nix-ide
-
-      # Appearance
-      # ryanolsonx.solarized
-      pkief.material-product-icons
-      # jtlowe.vscode-icon-theme
-      ms-ceintl.vscode-language-pack-zh-hans
-
-      # SSH
-      ms-vscode-remote.remote-ssh
-
-    ];
+    package = pkgs.vscode.fhsWithPackages
+      (ps: with ps; [ 
+        # Add depends here
+      ]);
   };
   
   # git configs

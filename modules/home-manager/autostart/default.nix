@@ -11,10 +11,7 @@
   # desktop-refresh
   home.file.".config/autostart/desktop-refresh.desktop".source = ../../../resources/autostart/desktop-refresh.desktop;
 
-  # Qv2ray
-  home.file.".config/autostart/qv2ray.desktop".source = ../../../resources/autostart/qv2ray.desktop;
-  
   # Birdtray
   home.file.".config/autostart/com.ulduzsoft.Birdtray.desktop".source = ../../../resources/autostart/com.ulduzsoft.Birdtray.desktop;
-
+  
 }

@@ -15,7 +15,7 @@
     localsend # File transfer 文件传输
     qq # Social app 社交软件 
     wechat-uos # wechat
-    qv2ray # Proxy client
+    clash-verge-rev # clash
     teamspeak_client # Speak client
     telegram-desktop # Social app
     varia # download manager
@@ -26,14 +26,15 @@
     octaveFull # Calculating
     kdePackages.kalzium # periodic table
     dialect # translator
+    # geogebra6 # geogebra
 
     # Game
     hmcl # Minecraft Launcher MC 启动器
     lunar-client # PVP client
     
     # Development
-    vscode # Code editor 代码编辑器
     codeblocks # C IDE
+    emacs-gtk # GNU Emacs
 
     # Multi-Media
     netease-cloud-music-gtk # Netease GTK 
@@ -45,6 +46,7 @@
 
     # Graphics
     gimp # Photo editor
+    xournalpp # pdf editor
 
     # Office
     libreoffice-qt # Office
