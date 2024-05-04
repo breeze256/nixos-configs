@@ -1,7 +1,6 @@
 [Desktop Entry]
 Name=LazyDocker
 Exec=lazydocker %U
-Terminal=true
 Type=Application
 Icon=/home/breeze256/.local/share/pixmaps/lazydocker.png
 Categories=System;
