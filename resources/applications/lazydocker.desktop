@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=LazyDocker
-Exec=lazydock %U
+Exec=lazydocker %U
 Terminal=true
 Type=Application
-Icon=/home/breeze256/.local/share/pixmaps/lazydock.png
+Icon=/home/breeze256/.local/share/pixmaps/lazydocker.png
 Categories=System;
 Comment=TUI Docker manager
