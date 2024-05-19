@@ -72,6 +72,12 @@
 
     loader.efi.canTouchEfiVariables = true;
     loader.efi.efiSysMountPoint = "/boot"; # EFI mount point
+
+    # Extra modprobe configs.
+    extraModprobeConfig = ''
+      # Change fn's behavior
+      options hid_apple fnmode=2
+    '';
   };
 
 

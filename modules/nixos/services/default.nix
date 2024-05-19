@@ -29,4 +29,16 @@
     openFirewall = true;
   };
 
+  services.openssh = {
+    enable = true;
+    settings = {
+      UseDns = false;
+    };
+    extraConfig = ''
+      GSSAPIAuthentication no
+    ''; 
+  };
+  services.teamviewer.enable = true;
+  services.flatpak.enable = true;
+
 }

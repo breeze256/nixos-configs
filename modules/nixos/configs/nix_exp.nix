@@ -1,9 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-  # virt-manager
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+  # virtualbox
+  # virtualisation.virtualbox.host.enable = true;
 
   # Steam
   programs.steam = {

@@ -22,6 +22,12 @@
       proxychains # Terminal proxy
       android-tools # adb and fastboot tools adb 及 fastboot 工具
       
+      # C/CPP
+      gcc11 # GNU Compiler Collection
+      gdb # GNU Debug Bridge
+      gnumake # Make
+      clang-tools # Clang
+
       # Java (Just for Minecraft lol)
       zulu8 # ZuluJDK-8
       zulu17 # ZuluJDK-17
@@ -31,6 +37,7 @@
       
       ## GUI Applications
       # System
+      gtk3
       lightdm-gtk-greeter # Lightdm gtk greeter
       # gnome.gnome-software # Flatpak support Flatpak 支持
       plata-theme # GTK theme GTK 主题

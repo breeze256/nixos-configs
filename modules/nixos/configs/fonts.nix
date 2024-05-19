@@ -17,7 +17,7 @@
       source-code-pro
 
       # sarasa
-      sarasa-gothic
+      # sarasa-gothic
 
       # maple font
       maple-mono
@@ -36,7 +36,7 @@
       <!-- fix steam Chinese display -->
       <match target="pattern">
         <test qual="any" name="family"><string>Helvetica</string></test>
-        <edit name="family" mode="assign"><string>Sarasa UI SC</string></edit>
+        <edit name="family" mode="assign"><string>Noto Sans CJK SC</string></edit>
       </match>
     '';
 
@@ -48,20 +48,19 @@
       monospace = [
         "DejaVu Sans Mono"
         "monospace"
-        "Noto Sans Mono CJK SC"
+        "Maple Mono SC NF"
       ];
 
       # sansserif
       sansSerif = [
-        "Sarasa UI SC"
-        "Noto Sans CJK SC"
+        # "Sarasa UI SC"
+        "Source Han Sans"
         "DejaVu Sans"
       ];
 
       # serif fonts
       serif = [
-        "Noto Serif CJK SC" 
-        "Source Han Serif SC"
+        "Noto Serif CJK SC"
         "DejaVu Serif"
       ];
 

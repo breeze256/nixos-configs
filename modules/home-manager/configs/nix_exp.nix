@@ -87,7 +87,7 @@
   # git configs
   programs.git = {
     enable = true;
-    userName = "libshell64";
+    userName = "breeze256";
     userEmail = "18980896953@163.com";
   };
   

@@ -21,6 +21,7 @@
     telegram-desktop # Social app
     uget # GUI download manager
     # bilibili # bilibili
+    teamviewer
 
     # Education
     stellarium # Star map
@@ -28,6 +29,9 @@
     kdePackages.kalzium # periodic table
     dialect # translator
     # geogebra6 # geogebra
+    maxima # Calculator
+    wxmaxima # GUI for maxima
+    gitg # git GUI
 
     # Game
     hmcl # Minecraft Launcher MC 启动器
@@ -36,6 +40,8 @@
     # Development
     codeblocks # C IDE
     emacs-gtk # GNU Emacs
+    cpeditor # CPP editor
+    zettlr # Markdown editor
 
     # Multi-Media
     netease-cloud-music-gtk # Netease GTK 
