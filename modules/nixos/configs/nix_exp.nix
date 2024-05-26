@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # virtualbox
   # virtualisation.virtualbox.host.enable = true;
 
@@ -17,5 +20,4 @@
   programs.proxychains.proxies.prx1.type = "socks5";
   programs.proxychains.proxies.prx1.host = "127.0.0.1";
   programs.proxychains.proxies.prx1.port = 1089;
-
 }

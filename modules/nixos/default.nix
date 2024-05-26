@@ -3,10 +3,8 @@
 {
   # List your module files here
   imports = [
-
     ./packages
     ./services
     ./configs
-    
   ];
 }

@@ -1,7 +1,9 @@
 # Set autostart applications and commands
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # Conky
   home.file.".config/autostart/conky.desktop".source = ../../../resources/autostart/conky.desktop;
 
@@ -13,5 +15,4 @@
 
   # Birdtray
   home.file.".config/autostart/com.ulduzsoft.Birdtray.desktop".source = ../../../resources/autostart/com.ulduzsoft.Birdtray.desktop;
-  
 }

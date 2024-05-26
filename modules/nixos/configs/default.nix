@@ -3,9 +3,7 @@
 {
   # List your module files here
   imports = [
-
     ./fonts.nix
     ./nix_exp.nix
-    
   ];
 }

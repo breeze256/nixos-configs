@@ -1,10 +1,11 @@
-{ config, lib, pkgs, ... }:
-
-{  
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   environment = {
-
     systemPackages = with pkgs; [
-    
       ## CLI Applications
       # Tools
       wget # Web tool 网络工具
@@ -21,7 +22,7 @@
       appimagekit # Appimage tools
       proxychains # Terminal proxy
       android-tools # adb and fastboot tools adb 及 fastboot 工具
-      
+
       # C/CPP
       gcc11 # GNU Compiler Collection
       gdb # GNU Debug Bridge
@@ -34,7 +35,7 @@
 
       # Node.js
       nodejs
-      
+
       ## GUI Applications
       # System
       gtk3
@@ -58,24 +59,20 @@
       qalculate-gtk # Calculator
       cinnamon.nemo-fileroller # Nemo archive extensions Nemo 归档扩展
       gedit # GUI text editor GUI 文本编辑器
-      
+
       # Tools
       system-config-printer # CUPS configure tool
       ntfs3g # NTFS support
       woeusb-ng # Windows image flasher
-      
     ];
 
     budgie.excludePackages = with pkgs; [
-    
       mate.mate-terminal # => gnome.gnome-terminal
       mate.pluma # => gedit
       mate.engrampa # => gnome.file-roller
       mate.eom # => gthumb
       mate.mate-calc # => qalculate-gtk
-      mate.atril # => xournalpp 
-      
+      mate.atril # => xournalpp
     ];
-    
   };
 }

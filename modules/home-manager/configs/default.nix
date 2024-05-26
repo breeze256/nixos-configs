@@ -3,9 +3,7 @@
 {
   # List your module files here
   imports = [
-
     ./dconf.nix
     ./nix_exp.nix
-    
   ];
 }

@@ -1,29 +1,30 @@
 # MINIPC-PN64's configuration file.
-
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../modules/nixos
   ];
-  
+
   nixpkgs.config = {
-    allowUnfree = true; 
+    allowUnfree = true;
     permittedInsecurePackages = [
       "openssl-1.1.1w"
     ];
   };
 
   nix = {
-
     settings = {
       # Enable flakes and new 'nix' command
       experimental-features = "nix-command flakes"; # Enable flake
 
       # Deduplicate and optimize nix store
       auto-optimise-store = true;
-      trusted-users = [ "breeze256" ];
+      trusted-users = ["breeze256"];
       substituters = lib.mkForce [
         "https://mirror.sjtu.edu.cn/nix-channels/store"
         # "https://cache.nixos.org"
@@ -39,22 +40,21 @@
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
-
   };
 
   networking = {
     hostName = "MINIPC-PN64"; # hostname
     networkmanager.enable = true;
-    nameservers = [ "223.5.5.5" "223.6.6.6" ]; # Set DNS.
+    nameservers = ["223.5.5.5" "223.6.6.6"]; # Set DNS.
     # firewall.enable = false;
   };
 
   # GRUB configurations.
   boot = {
-    initrd.availableKernelModules = [ "ehci_hcd" ];
-    kernelParams = [ "intel_idle.max_cstate=1" ];
+    initrd.availableKernelModules = ["ehci_hcd"];
+    kernelParams = ["intel_idle.max_cstate=1"];
     kernelPackages = pkgs.linuxPackages_latest;
-    kernel.sysctl = { "vm.swappiness" = 25; };
+    kernel.sysctl = {"vm.swappiness" = 25;};
 
     loader.grub = {
       enable = true;
@@ -62,7 +62,7 @@
       efiSupport = true;
 
       # Add the Windows boot entry.
-      extraEntries = '' 
+      extraEntries = ''
         menuentry "Windows Boot Manager" {
             search --file --no-floppy --set=root /EFI/Microsoft/Boot/bootmgfw.efi
             chainloader (''${root})/EFI/Microsoft/Boot/bootmgfw.efi
@@ -80,14 +80,13 @@
     '';
   };
 
-
   # Filesystem and swap settings.
   fileSystems = {
-    "/".options = [ "compress=zstd" ];
-    "/home".options = [ "compress=zstd" ];
-    "/nix".options = [ "compress=zstd" "noatime" ];
+    "/".options = ["compress=zstd"];
+    "/home".options = ["compress=zstd"];
+    "/nix".options = ["compress=zstd" "noatime"];
   };
-  swapDevices = [ { device = "/dev/nvme0n1p4"; } ]; # Define swap device 指定交换空间设备
+  swapDevices = [{device = "/dev/nvme0n1p4";}]; # Define swap device 指定交换空间设备
 
   # user configs
   users.users = {
@@ -96,15 +95,15 @@
       openssh.authorizedKeys.keys = [
         # SSH Key
       ];
-      extraGroups = [ "wheel" "docker" "vboxusers" ];
+      extraGroups = ["wheel" "docker" "vboxusers"];
     };
   };
 
   # time zone
   time.timeZone = "Asia/Shanghai";
-  
+
   # select internationalisation properties
-  i18n.defaultLocale = "zh_CN.UTF-8"; 
+  i18n.defaultLocale = "zh_CN.UTF-8";
   i18n.inputMethod = {
     enabled = "fcitx5"; # fcitx5
     fcitx5.addons = with pkgs; [
@@ -130,9 +129,8 @@
   virtualisation.docker.enable = true;
   virtualisation.docker.storageDriver = "btrfs";
   virtualisation.docker.daemon.settings = {
-    "registry-mirrors" = [ "https://docker.mirrors.ustc.edu.cn/" ];
+    "registry-mirrors" = ["https://docker.mirrors.ustc.edu.cn/"];
   };
-
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
@@ -153,4 +151,3 @@
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "24.05"; # Did you read the comment? 你阅读注释了吗
 }
-

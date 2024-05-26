@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   # bash
   programs.bash = {
     enable = true;
@@ -78,44 +80,45 @@
   # vscode
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode.fhsWithPackages
-      (ps: with ps; [ 
-        # Add depends here
-      ]);
+    package =
+      pkgs.vscode.fhsWithPackages
+      (ps:
+        with ps; [
+          # Add depends here
+        ]);
   };
-  
+
   # git configs
   programs.git = {
     enable = true;
     userName = "breeze256";
     userEmail = "18980896953@163.com";
   };
-  
+
   # Conky configs
   home.file.".config/conky" = {
     source = ../../../resources/conky;
     recursive = true;
   };
-  
+
   # Minecraft natives
   home.file.".minecraft/natives" = {
     source = ../../../resources/mc-natives;
     recursive = true;
   };
-  
+
   # Pixmaps
   home.file.".local/share/pixmaps" = {
     source = ../../../resources/pixmaps;
     recursive = true;
   };
-  
+
   # User's scripts
   home.file.".local/share/scripts" = {
     source = ../../../resources/scripts;
     recursive = true;
     executable = true;
   };
-
 
   # Modified desktop files
   home.file.".local/share/applications" = {

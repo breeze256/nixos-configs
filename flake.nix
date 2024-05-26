@@ -24,20 +24,22 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
+  outputs = inputs @ {
+    nixpkgs,
+    home-manager,
+    ...
+  }: {
     nixosConfigurations = {
       MINIPC-PN64 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
         modules = [
-
           ./nixos
           (import ./overlays) # import overlays
 
           # import home-manager as a module
           home-manager.nixosModules.home-manager
           {
-
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
@@ -46,11 +48,8 @@
 
             # use inputs in home.nix
             home-manager.extraSpecialArgs = inputs;
-            
           }
-
         ];
-        
       };
     };
   };

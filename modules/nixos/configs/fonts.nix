@@ -1,12 +1,13 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Set fonts.
   fonts = {
-
     fontDir.enable = true;
     packages = with pkgs; [
-
       # noto-fonts
       noto-fonts
       noto-fonts-cjk-sans
@@ -29,7 +30,6 @@
       hack-font
       jetbrains-mono
       cascadia-code
-      
     ];
 
     fontconfig.localConf = ''
@@ -41,8 +41,7 @@
     '';
 
     fontconfig.defaultFonts = {
-
-      emoji = [ "Noto Color Emoji" ]; # emoji
+      emoji = ["Noto Color Emoji"]; # emoji
 
       # monospace
       monospace = [
@@ -63,8 +62,6 @@
         "Noto Serif CJK SC"
         "DejaVu Serif"
       ];
-
     };
-
   };
 }
