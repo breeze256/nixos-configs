@@ -17,6 +17,10 @@
       source-han-sans
       source-code-pro
 
+      # lxgw font
+      lxgw-wenkai
+      lxgw-neoxihei
+
       # sarasa
       # sarasa-gothic
 

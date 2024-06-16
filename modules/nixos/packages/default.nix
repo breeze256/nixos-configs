@@ -10,6 +10,7 @@
       # Tools
       wget # Web tool 网络工具
       vim # TUI Text editor TUI 文本编辑器
+      psmisc # process tool
       git # Git tool Git 工具
       colorls # ls with color and font-awesome icons
       aria2 # Download tool
@@ -49,6 +50,7 @@
       gnome.gnome-terminal # Gnome terminal Gnome 终端
       gnome.dconf-editor # Dconf view
       gnome.gnome-system-monitor # Gnome system monitor Gnome 系统监视器
+      gnome.gnome-font-viewer # Gnome font viewer
       gnome.file-roller # Gnome archive manager Gnome 归档管理器
       gnome.gnome-calendar # Gnome calendar
       gnome.pomodoro # Time management

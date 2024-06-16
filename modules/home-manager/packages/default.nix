@@ -12,7 +12,7 @@
     lazydocker # Docker manager
 
     # Internet
-    firefox # Web browser 网络浏览器
+    microsoft-edge-dev # Web browser
     thunderbird # Email client
     birdtray # thunderbird tray
     localsend # File transfer 文件传输
@@ -43,7 +43,7 @@
     codeblocks # C IDE
     emacs-gtk # GNU Emacs
     cpeditor # CPP editor
-    zettlr # Markdown editor
+    joplin-desktop # Markdown editor
 
     # Multi-Media
     netease-cloud-music-gtk # Netease GTK
