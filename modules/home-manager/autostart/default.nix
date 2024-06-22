@@ -10,7 +10,7 @@
   # nemo-desktop
   home.file.".config/autostart/nemo-desktop.desktop".source = ../../../resources/autostart/nemo-desktop.desktop;
 
-  # desktop-refresh
+  # desktop-refresh (for nemo-desktop)
   home.file.".config/autostart/desktop-refresh.desktop".source = ../../../resources/autostart/desktop-refresh.desktop;
 
   # Birdtray

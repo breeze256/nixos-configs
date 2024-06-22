@@ -16,6 +16,7 @@
       # source-sans
       source-han-sans
       source-code-pro
+      source-han-mono
 
       # lxgw font
       lxgw-wenkai

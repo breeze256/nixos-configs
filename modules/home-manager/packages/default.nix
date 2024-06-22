@@ -47,6 +47,7 @@
 
     # Multi-Media
     netease-cloud-music-gtk # Netease GTK
+    # osdlyrics # lyrics fetcher/displayer
     # bilibili # bilibili
     obs-studio # Screen recorder
 

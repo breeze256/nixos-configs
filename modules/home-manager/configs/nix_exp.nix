@@ -95,6 +95,30 @@
     userEmail = "18980896953@163.com";
   };
 
+  # Darkman configs
+  services.darkman = {
+    enable = true;
+    darkModeScripts = {
+      gtk-theme = ''
+        ${pkgs.dconf}/bin/dconf write \
+            /org/gnome/desktop/interface/gtk-theme "'Plata-Noir'" &&
+        ${pkgs.dconf}/bin/dconf write \
+            /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+      '';
+      };
+    lightModeScripts = {
+      gtk-theme = ''
+        ${pkgs.dconf}/bin/dconf write \
+            /org/gnome/desktop/interface/gtk-theme "'Plata-Lumine'" &&
+        ${pkgs.dconf}/bin/dconf write \
+            /org/gnome/desktop/interface/color-scheme "'prefer-light'"
+      '';
+    };
+    settings = {
+      usegeoclue = true;
+    };
+  };
+
   # Conky configs
   home.file.".config/conky" = {
     source = ../../../resources/conky;
